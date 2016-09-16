@@ -1,0 +1,107 @@
+header {
+	text-align: center;
+	text-transform: uppercase;
+	background: whitesmoke;
+    padding-top: 10vh;
+	transition: 0.3s;
+
+	@include media-query(mobile) {
+		padding-top: 12vh;
+	};
+
+    h1 {
+        margin: 0;
+        font-size: 5rem;
+        color: $rock;
+        margin-bottom: 3vh;
+        position: relative;
+		font-family: $bodyFont;
+		transition: 0.3s;
+		letter-spacing: 2px;
+
+        &:after {
+            content:"";
+            position: absolute;
+            bottom: -40px;
+            width: 200px;
+            left: calc(50% - 100px);
+            height: 4px;
+            background: $flamingo;
+        }
+
+		@include media-query(tablet) {
+			font-size: 13vw;
+		};
+
+		@include media-query(mobile) {
+			font-size: 13vw;
+		};
+    }
+
+	> form {
+        padding-top: 60px;
+
+		input[type="text"] {
+			border: 3px solid $rock;
+            background: $rock;
+            color: whitesmoke;
+			padding: 10px 5px;
+			margin-top: 40px;
+			width: 300px;
+			-webkit-appearance:none;
+		}
+
+		input[type="submit"] {
+			border: none;
+			padding: 10px 5px;
+            margin-top: 40px;
+			width: 100px;
+			background: whitesmoke;
+			border: 3px solid $rock;
+			transition: 0.3s;
+			font-weight: bold;
+			text-transform: uppercase;
+			-webkit-appearance:none;
+
+			&:hover, &:focus {
+				border: 3px solid $flamingo;
+			}
+		}
+
+		label {
+			display: block;
+			margin: 0 auto 0 auto;
+		}
+
+		@include media-query(mobile) {
+			width: 90%;
+			margin: 0 auto;
+		};
+	}
+}
+
+.svgWrapper {
+    display: none;
+	transition: 0.4s;
+
+	g.paw {
+		display: none;
+		fill: $rock;
+	}
+
+	@include media-query(tbalet) {
+		width: 90%;
+		margin: 0 auto;
+	};
+
+	@include media-query(mobile) {
+		width: 80%;
+		margin: 0 auto;
+
+		svg {
+			width: 100%;
+			height: auto;
+		}
+	};
+
+}

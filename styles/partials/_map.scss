@@ -1,0 +1,250 @@
+// ---------------- map ----------- //
+main {
+    background-color: whitesmoke;
+    color: $rock;
+
+    .mapWrapper {
+    	display: flex;
+        position: relative;
+        flex-direction: column-reverse;
+        padding: 0 0 50px 0;
+
+
+    	#mapid {
+    		height: 50vh;
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+}
+
+.secondForm {
+	width: 35%;
+	margin: 10px;
+    display: none;
+
+    .secondForm__title {
+        font-size: 30px;
+
+        @include media-query(mobile) {
+            font-size: 10vw;
+        };
+    }
+
+    input[type='checkbox'] {
+        opacity: 0;
+    }
+
+    p {
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    label > p {
+        font-size: 12px;
+    }
+}
+
+.checkBoxesWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .checkboxSizeAge {
+        width: 37%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include media-query(mobile) {
+            float: left;
+            width: 48%;
+            margin: 1px;
+        };
+
+        input[name="size"]:checked + label svg {
+            fill: #EF6550;
+        }
+
+        input[name="size"]:checked + label p {
+            color: #EF6550;
+        }
+
+        input[name="age"]:checked + label svg {
+            fill: #EF6550;
+        }
+
+        input[name="age"]:checked + label p {
+            color: #EF6550;
+        }
+    }
+
+    .checkboxGender {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include media-query(mobile) {
+            float: left;
+            width: 48%;
+            margin: 1px;
+        };
+
+
+        input[name="sex"]:checked + label svg {
+        fill: #EF6550;
+        }
+
+        input[name="sex"]:checked + label p {
+        color: #EF6550;
+        }
+    }
+
+    @include media-query(mobile) {
+        &.hide {
+            display: none;
+        }
+    };
+}
+
+.secondForm {
+    width: 100%;
+    margin: 10px 0;
+
+    form {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        @include media-query(tablet) {
+            justify-content: center;
+        }
+
+        @include media-query(mobile) {
+            display: block;
+        }
+
+       > h2 {
+            font-size: 30px;
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    fieldset {
+        border: 0;
+        width: 30%;
+
+        @include media-query(tablet) {
+            width: 49%;
+        }
+
+        @include media-query(mobile) {
+            width: 100%;
+
+            > p {
+                width: 50%;
+                margin: 20px auto;
+                background: #e6e4e4;
+                padding: 20px;
+                cursor: pointer;
+            }
+        }
+
+    }
+    input[type="checkbox"] + label  {
+
+        svg {
+            fill: $rock;
+            display: block;
+            margin: 15px auto;
+        }
+
+        p {
+            color: $rock;
+        }
+    }
+
+    input[type="checkbox"] {
+        opacity: 0;
+
+        &:checked + label {
+            svg {
+                fill: #EF6550;
+            }
+
+            p {
+                color: #EF6550;
+            }
+        }
+    }
+
+    p {
+        text-align: center;
+        font-size: 16px;
+        margin-bottom: 15px;
+        color: $rock;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    label > p {
+        font-size: 12px;
+        color: $rock;
+
+        @include media-query(mobile) {
+            background: #e6e4e4;
+            padding: 10px;
+            width: 100%;
+        };
+
+    }
+}
+
+.infoWindow > div {
+    .clientDog {
+        margin: 0 auto;
+        display: block;
+        width: 50px;
+
+        > svg {
+            position: static;
+
+            #head {
+                /*-webkit-animation-duration: 3s;*/
+                -webkit-animation-delay: 1s;
+                -webkit-animation-iteration-count: 2;
+            }
+
+            #bark {
+                -webkit-animation-delay: 3s;
+                -webkit-animation-iteration-count: 2;
+            }
+
+            > path {
+                fill: $rock;
+            }
+        }
+    }
+
+    .shelterInfo {
+        margin-top: 15px;
+        font-size: 15px;
+        text-align: center;
+        width: 100%;
+
+        p {
+            margin: 10px 0;
+        }
+    }
+}
+
+fieldset {
+    border: 0;
+}

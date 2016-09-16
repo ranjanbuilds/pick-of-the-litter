@@ -1,0 +1,40 @@
+// ----- large containers -----//
+
+body {
+	overflow-x: hidden;
+	background: whitesmoke;
+}
+section, header, footer, main {
+	width: 100%;
+}
+
+.wrapper {
+	max-width: 1200px;
+	margin: 0px auto;
+	padding: 50px 0;
+}
+
+// ----- typography ----- //
+h1, h2 {
+	font-family: $headingFont;
+}
+
+h3, p, label, a, input {
+	font-family: $bodyFont;
+	color: #513531;
+	margin: 0;
+}
+
+a, a:hover, a:focus, a:active {
+	outline: 0;
+	text-decoration: none;
+	transition: 0.3s;
+}
+
+a:hover {
+	color: $pistachio;
+}
+
+&.hide {
+		display: none;
+}

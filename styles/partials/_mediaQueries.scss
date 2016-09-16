@@ -1,0 +1,16 @@
+$tablet: 746px;
+$mobile: 500px;
+@mixin media-query($media-query) {
+
+	@if $media-query == tablet {
+		@media only screen and (min-width: $mobile) and (max-width: $tablet) {
+			@content;
+		}
+	}
+
+	@if $media-query == mobile {
+		@media only screen and (max-width: $mobile) {
+			@content;
+		}
+	}
+}
